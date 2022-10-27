@@ -6,19 +6,70 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="style.css" rel="stylesheet">
 	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-	<title>My Map Mania</title>
+	<title>Map Mania Game</title>
 </head>
 <body onload="initApplication()" style="height: 100%; margin: 0; padding: 0;">
 	<div class="container">
 		<div class="row">
-			<div class="col-5 mx-auto">
-				<h1 class="display-4 text-center mt-3">My Map Mania</h1>
+			<div class="col-4 mx-auto text-center">
+				<h1 class="display-4 mt-3">Map Mania Game</h1>
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#gettingstarted">
+					Getting Started
+				</button>
+				<!-- Modal -->
+				<div class="modal fade" id="gettingstarted" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Map Mania Game</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						</div>
+						<div class="modal-body">
+						You will be tasked to find the places on the map. Without knowing what they are! I will give you hints to find the places. 
+						If you want to give up, double click score to find all the places. 
+						</div>
+						<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-4 mx-auto text-center">
+			<h1 class="display-6 mt-3 d-inline" ondblclick="displayWinModal()">Score: </h1>
+				<input type="d-inline"  disabled></input>
+				<input class="mt-4" disabled></input>
+				<!-- Modal -->
+				<div class="modal fade" id="cheatCode" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Win Now</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						</div>
+						<div class="modal-body">
+						Are you sure you want to Win Now?
+						This will show all the locations!   
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" onclick="makePointsVisible()" data-dismiss="modal">Yes</button>
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+						</div>
+					</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 	<div id="myMapID" style="height: 100%;"></div>
-	<!-- JavaScript Bundle with Popper -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSFG5yi2n5-AxomDVHoeu_Ux5lSZPseP0&callback=initMap&v=weekly"
     defer
