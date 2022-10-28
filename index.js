@@ -14,7 +14,7 @@ var favoritePlaces = {
 		{"name":"Sedona AZ", "lattitude": 34.8697, "longitude": -111.7610},
 		{"name":"Microcenter", "lattitude": 41.81144519275075, "longitude": -87.97259194393423}, 
     	{"name":"Alpine Valley", "lattitude": 42.735998043919885, "longitude": -88.42802844391068},
-    	{"name":"Lecacy Adventure Park", "lattitude": 41.56686911330436, "longitude": -88.07059287277652}, 
+    	{"name":"Legacy Adventure Park", "lattitude": 41.56686911330436, "longitude": -88.07059287277652}, 
     	{"name":"Badlands Off Road Park", "lattitude": 40.27257726862229, "longitude": -87.26623514397254}, 
     	{"name":"Cedar Point", "lattitude": 41.482359694051716, "longitude": -82.68350987277863}
     		
